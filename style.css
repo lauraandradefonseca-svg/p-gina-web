@@ -1,0 +1,167 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:Arial, Helvetica, sans-serif;
+}
+
+body{
+    background:linear-gradient(135deg,#0f0f0f,#1b1b1b,#000);
+    color:white;
+}
+
+header{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    padding:25px 10%;
+}
+
+.logo{
+    font-size:30px;
+    color:#d4af37;
+    font-weight:bold;
+}
+
+nav a{
+    color:white;
+    text-decoration:none;
+    margin-left:30px;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:#d4af37;
+}
+
+.hero{
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    min-height:85vh;
+    padding:0 10%;
+    flex-wrap:wrap;
+}
+
+.text{
+    max-width:520px;
+}
+
+.text h1{
+    font-size:60px;
+    margin-bottom:20px;
+}
+
+.text h1 span{
+    color:#d4af37;
+}
+
+.text p{
+    color:#ccc;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.price{
+    color:#d4af37;
+    font-size:40px;
+    margin-bottom:25px;
+}
+
+.buttons{
+    display:flex;
+    gap:15px;
+}
+
+button{
+    border:none;
+    padding:15px 30px;
+    border-radius:40px;
+    cursor:pointer;
+    font-size:17px;
+    transition:.3s;
+}
+
+.buy{
+    background:#d4af37;
+    color:black;
+}
+
+.buy:hover{
+    transform:scale(1.08);
+}
+
+.like{
+    background:#222;
+    color:white;
+}
+
+.like:hover{
+    background:#444;
+}
+
+.image{
+    position:relative;
+}
+
+.image img{
+    width:350px;
+    animation:float 3s ease-in-out infinite;
+    filter:drop-shadow(0 0 30px rgba(212,175,55,.4));
+}
+
+.glow{
+    position:absolute;
+    width:350px;
+    height:350px;
+    background:#d4af37;
+    filter:blur(140px);
+    opacity:.18;
+    z-index:-1;
+    top:30px;
+}
+
+@keyframes float{
+
+0%{
+    transform:translateY(0);
+}
+
+50%{
+    transform:translateY(-18px);
+}
+
+100%{
+    transform:translateY(0);
+}
+
+}
+
+footer{
+    text-align:center;
+    padding:25px;
+    color:#888;
+}
+
+@media(max-width:900px){
+
+.hero{
+    flex-direction:column-reverse;
+    text-align:center;
+    padding:40px 20px;
+}
+
+.text h1{
+    font-size:42px;
+}
+
+.buttons{
+    justify-content:center;
+}
+
+.image img{
+    width:260px;
+    margin-bottom:40px;
+}
+
+}
